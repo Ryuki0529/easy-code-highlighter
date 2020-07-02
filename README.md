@@ -4,3 +4,5 @@ Highlight.jsをよくWordPressで使うので、サイト変えたときやテ�
 <img src="./easy-code-highlighter.png" alt="easy-code-highlighterの設定画面イメージ" />
 <h2>使い方：How to use</h2>
 <p>プラグインを有効化した時点で、Highlight.jsが適用された状態になります。初期設定のままだと「default」テーマが適用されます。「設定」＞「コードハイライト設定」で、お好みのテーマを選択してください。</p>
+<br/>
+<a href="https://highlightjs.org/" target="_blank">Highlight.jsの公式サイト</a>
