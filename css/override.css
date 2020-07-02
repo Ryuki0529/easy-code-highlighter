@@ -1,0 +1,9 @@
+pre {
+    padding: 0;
+    background: unset;
+}
+
+.hljs {
+    padding: 1em;
+    font-size: 13pt;
+}

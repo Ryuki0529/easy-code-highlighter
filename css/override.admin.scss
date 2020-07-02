@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// メースのflexbox
+@mixin flexbese($ac:start, $ai:normal, $jc:center) {
+	display: flex;
+	align-content: $ac;
+	align-items: $ai;
+    justify-content: $jc;
+    flex-flow: row wrap;
+	width: 100%;
+}
+
+// ベースのメディアクエリ
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 680px;  // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+// ブラウザーごとのスタイル設定
+@mixin browser-IE {
+    @media all and (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+// ==============================
+// ==============================
+
+.ech-wrap {
+    @include flexbese;
+    label.full-width {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
+        font-size: 13pt;
+    }
+    .sample-code-elem {
+        width: 50%;
+        padding: 10px;
+        .change-language-control {
+            @include flexbese;
+            background-color: white;
+            .chg-lang-btn {
+                flex-basis: 15%;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+                border: none;
+                border-bottom: 5px solid rgb(209, 209, 209);
+                cursor: pointer;
+            }
+        }
+        .hljs {
+            overflow-y: auto;
+            height: 600px;
+        }
+    }
+    .setting-right-elem {
+        width: 50%;
+        padding: 10px;
+        .thema-name-list {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            input[type="radio"] { display: none; }
+            input[type="radio"] + label {
+                font-size: 13pt;
+                padding: 7px;
+                border: 1px solid rgb(188, 188, 188);
+                background-color: rgb(221, 221, 221);
+                display: inline-block;
+                cursor: pointer;
+                margin: 2px;
+            }
+            input[type="radio"]:checked + label {
+                background-color: #a6a6a6;
+                color: white;
+            }
+        }
+    }
+}
