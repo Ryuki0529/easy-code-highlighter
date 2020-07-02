@@ -57,7 +57,12 @@ class EasyCodeHighlighter {
         ?>
         <div class="wrap">
             <h1>コードハイライト設定</h1>
-            <p>記事で利用するhighlighter.jsの設定を行います。</p>
+            <p>
+                記事で利用するhighlighter.jsの設定を行います。
+                お問い合わせやフィードバック等ありましたら、
+                <a href="https://twitter.com/prog_lhaplus" target="_blank">Twitter</a>または
+                <a href="https://lhaplus.biz/wp-highlight-js/" target="_blank">ブログまでお願いします、</a>
+            </p>
 
             <form action="" method='post' class="form-table">
             <?php //wp_nonce_field( self::NONCE_ACTION, self::NONCE_KEYTEXT ) ?>
